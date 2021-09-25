@@ -15,8 +15,6 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function countCats(matrix) {
-  throw new NotImplementedError('Not implemented');
-
   const filterCats = (item) => item == '^^'; 
   const summaryReducer = (previousValue, currentValue) => previousValue + currentValue.filter(filterCats).length;
   return matrix.reduce(summaryReducer, 0);

@@ -18,8 +18,6 @@ const HALF_LIFE_PERIOD = 5730;
  *
  */
 export default function dateSample(sampleActivity) {
-  throw new NotImplementedError('Not implemented');
-
   if (typeof(sampleActivity) != 'string') {
     return false;
   }
