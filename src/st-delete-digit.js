@@ -12,6 +12,10 @@ import { NotImplementedError } from '../extensions/index.js';
  *
  */
 export default function deleteDigit(/* n */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+  var s = String(n).split('').map(Number)
+  return Math.max(...s.map((el,i)=>{var r = s.slice(); r.splice(i,1); return Number( r.join(''))}))
 }
+
+
+
+
