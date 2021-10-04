@@ -15,3 +15,4 @@ describe('st-delete-digit', () => {
     assert.strictEqual(deleteDigit(109), 19);
   });
 });
+

@@ -19,6 +19,7 @@ export default function createDreamTeam(members) {
   }
   const onlyStrings = (item) => typeof(item) === 'string';
   const onlyValidLetters = (letter) => letter >= 'A' && letter <= 'Z';
-  const toLetters = (item) => item.replaceAll(' ', '').charAt(0).toUpperCase();
+  const toLetters = (item) => item.replace(/ +/g, '').charAt(0).toUpperCase();
+  
   return members.filter(onlyStrings).map(toLetters).filter(onlyValidLetters).sort().join('');
 }
